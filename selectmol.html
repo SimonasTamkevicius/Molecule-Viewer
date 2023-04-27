@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="A4CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="A4JAVASCRIPT.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1 id="title" onclick="location.href='home.html'">Molecule Viewer</h1>
+      <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="elements.html">Add/Remove Elements</a></li>
+            <li><a href="upload_sdf.html">Upload SDF File</a></li>
+            <li><a href="selectmol.html">Select and Display Molecule</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="select-div">
+        <h2>Select and Display a Molecule</h2>
+        {{form}}
+        <h3>
+          Use these buttons to rotate the selected molecule around:
+        </h3>
+        <div id="svg-container">
+          
+        </div>
+        
+        <div class="button-container">
+            <button size="+2" id="button-right" class="button-horizontal">Rotate right</button>
+            <button size="+2" id="button-left" class="button-horizontal">Rotate left</button>
+            <button size="+2" id="button-top" class="button-vertical">Rotate up</button>
+            <button size="+2" id="button-bottom" class="button-vertical">Rotate down</button>
+        </div>
+    </div>
+  </body>
+</html>

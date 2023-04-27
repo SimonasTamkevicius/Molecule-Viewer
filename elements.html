@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="A4CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="A4JAVASCRIPT.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1 id="title" onclick="location.href='home.html'">Molecule Viewer</h1>
+      <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="elements.html">Add/Remove Elements</a></li>
+            <li><a href="upload_sdf.html">Upload SDF File</a></li>
+            <li><a href="selectmol.html">Select and Display Molecule</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="add-remove">
+      <h1 id="add-remove-header">Add or Remove Elements</h1>
+      <form id="element-add" action="element-add" enctype="multipart/form-data" method="POST">
+        <label for="element-number">Element Number:</label>
+        <input type="number" id="element-number" name="element-number" min="0" required>
+
+        <label for="element-code">Element Code:</label>
+        <input type="text" id="element-code" name="element-code" pattern="[A-Za-z]+" maxlength="2" required>
+
+        <label for="element-name">Element Name:</label>
+        <input type="text" id="element-name" name="element-name" pattern="[A-Za-z]+" maxlength="31" required>
+
+        <label for="color1">Color 1:</label>
+        <input type="color" id="color1" name="color1" required>
+
+        <label for="color2">Color 2:</label>
+        <input type="color" id="color2" name="color2" required>
+
+        <label for="color3">Color 3:</label>
+        <input type="color" id="color3" name="color3" required>
+
+        <label for="radius">Radius:</label>
+        <input type="number" id="radius" name="radius" min="0" max="100" required>
+
+        <button type="submit" id="add-btn"><font size="2">Add Element</font></button>
+      </form>
+
+      <h1>Remove Element</h1>
+      <form id="element-remove" action="element-remove" enctype="multipart/form-data" method="POST">
+        <label for="remove-element-code">Enter Element Code to Remove:</label>
+        {{form}}
+        <input type="text" id="remove-element-code" name="remove-element-code" pattern="[A-Za-z]+" maxlength="2" required>
+
+        <button type="submit" id="remove-btn"><font size="2">Remove Element</font></button>
+      </form>
+    </div>
+  </body>
+</html>

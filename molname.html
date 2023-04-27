@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="A4CSS.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="A4JAVASCRIPT.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1> Molecule Name </h1>
+        <form id="molecule-name-form" action="molecule-name-form" enctype="multipart/form-data" method="POST">
+            <label for="molecule-name">Please enter a name for the new molecule:</label>
+            <input type="text" id="molecule-name" name="molecule-name" pattern="[A-Za-z]+" required>
+            <input type="submit" id="molecule-name-btn" value="Submit"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="A4CSS.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="A4JAVASCRIPT.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1 id="title" onclick="location.href='home.html'"">Molecule Viewer</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="elements.html">Add/Remove Elements</a></li>
+                    <li><a href="upload_sdf.html">Upload SDF File</a></li>
+                    <li><a href="selectmol.html">Select and Display Molecule</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="file-upload-head"> File Upload </h1>
+        <div id="file-upload">
+            <form action="upload-sdf" enctype="multipart/form-data" method="POST">
+                <p id="sdf-upload-message">
+                    Select an SDF of a Molecule to Upload it to the Database:
+                </p>
+                <h4>
+                    <div>
+                        <label for="sdf_file" class="custom-file-upload">Choose File</label>
+                        <input type="file" id="sdf_file" name="filename" accept=".sdf" required/>
+                        <div id="preview"></div>
+                    </div>
+                <h4>
+                    <button type="submit" id="upload-btn"><font size="2">Upload</font></button>
+                </h4>
+            </form>
+        </div>
+    </body>
+</html>
